@@ -43,20 +43,37 @@ It measures the accuracy.
 3. RecGPT: RecGPT is a domain-adapted large language model specifically trained for text-based recommendation tasks.
 
 **References:**
-1. https://recbole.io/docs/user_guide/model/general/bpr.html
-2. https://recbole.io/
-3. https://grouplens.org/datasets/movielens/100k/
-4. https://huggingface.co/docs/hub/en/models-the-hub
-5. https://www.ibm.com/think/topics/recommendation-engine#:~:text=The%20market%20for%20recommendation%20systems,to%20triple%20in%205%20years.&text=Uncover%20the%20benefits%20of%20AI%20platforms%20that%20enable%20foundation%20model%20customization.
-6. https://openai.com/ 
-7. https://www.amazon.science/the-history-of-amazons-recommendation-algorithm
-8. https://www.amazon.science/code-and-datasets/simrec-mitigating-the-cold-start-problem-in-sequential-recommendation-by-integrating-item-similarity
-9. https://github.com/amazon-science
-10. xLSTM-Mixer: Multivariate Time Series Forecasting by Mixing via Scalar Memories: https://doi.org/10.48550/arXiv.2410.16928
-11. xLSTM: Extended Long Short-Term Memory: https://arxiv.org/pdf/2405.04517
-12. xLSTM Time : Long-term Time Series Forecasting With xLSTM: https://doi.org/10.48550/arXiv.2407.10240
-13. Quaternion Transformer4Rec: Quaternion numbers-based Transformer for recommendation: https://github.com/vanzytay/QuaternionTransformers
-14. Recommender Systems: A Primer: https://doi.org/10.48550/arXiv.2302.02579
-15. Exploring the Impact of Large Language Models on Recommender Systems: An Extensive Review: https://arxiv.org/pdf/2402.18590
-16. Recommender Systems with Generative Retrieval: https://openreview.net/pdf?id=BJ0fQUU32w
-17. Attention Is All You Need: https://arxiv.org/abs/1706.03762
+
+[1] xLSTM: Extended Long Short-Term Memory: https://arxiv.org/pdf/2405.04517
+
+[2] xLSTM-Mixer: Multivariate Time Series Forecasting by Mixing via Scalar Memories: https://doi.org/10.48550/arXiv.2410.16928
+
+[3] Amazon Science: https://github.com/amazon-science
+
+[4] xLSTM Time : Long-term Time Series Forecasting With xLSTM: https://doi.org/10.48550/arXiv.2407.10240
+
+[5] Quaternion Transformer4Rec: Quaternion numbers-based Transformer for recommendation: https://github.com/vanzytay/QuaternionTransformers
+
+[6] Recommender Systems: A Primer: https://doi.org/10.48550/arXiv.2302.02579
+
+[7] Exploring the Impact of Large Language Models on Recommender Systems: An Extensive Review: https://arxiv.org/pdf/2402.18590
+
+[8] Recommender Systems with Generative Retrieval: https://openreview.net/pdf?id=BJ0fQUU32w
+
+[9] Attention Is All You Need: https://arxiv.org/abs/1706.03762
+
+[10] Recbole: https://recbole.io
+
+[11] Group Lens: https://grouplens.org/datasets/movielens/100k/
+
+[12] OpenAI: https://openai.com/
+
+[13] Hugging Face: https://huggingface.co/docs/hub/en/models-the-hub
+
+[14] Kreutz, C.K., Schenkel, R. Scientific paper recommendation systems: a literature review of recent publications. Int J Digit Libr 23, 335–369 (2022). https://doi.org/10.1007/s00799-022-00339-w
+
+[15] Recommendation Systems: Algorithms, Challenges, Metrics, and Business Opportunities https://doi.org/10.3390/app10217748
+
+[16] Roy, D., Dutta, M. A systematic review and research perspective on recommender systems. J Big Data 9, 59 (2022). https://doi.org/10.1186/s40537-022-00592-5
+
+[17] A Comprehensive Review of Recommender Systems: Transitioning from Theory to Practice https://doi.org/10.48550/arXiv.2407.13699
