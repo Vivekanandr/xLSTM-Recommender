@@ -1,4 +1,4 @@
-# Recommender Systems
+Audio Podcast Version: https://www.dropbox.com/scl/fi/zv511ysp0ecdaqbo9nskp/Recommender-Systems_-Architectures-Applications-and-Market-Analysis.wav?rlkey=3u9za3bbogvc0506ubxohxe2w&st=gy3ekapc&dl=0
 
 At its core, a **recommendation engine** uses computer algorithms to predict and suggest items of interest to users based on their past behaviors and contextual data. On the deep learning front, xLSTM (extended LSTM) and Transformers have been evolved with latest architectures in recent years and plays a very important role in Large Language Models. 
 
@@ -11,22 +11,105 @@ A transformer-based recommender system uses an embedding layer to convert the us
 
 **Matrix Factorization Based:** It decompose a user-item interaction matrix into two smaller matrices: one representing users and the other representing items. These matrices capture latent factors (hidden patterns) that explain the user preferences and item characteristics. By reconstructing the original matrix, the system predicts how much a user might like an unseen item. Some techniques include SIngular Value Decomposition (SVD), Non-Negative Matrix Factorization (NMF) and Probabilistic Matrix Factorization (PMF).
 
-
 **Proposed Hybrid Methods & Noval Approaches:** xLSTM (extended LSTM) incorporates architectural enhancements like attention mechanism, gating improvments and bidirectional capabilities. It will be impactful due to several unique aspects when to compared to the traditional successful methods. 
 
+Value Proposition: The core concept and unique benefit is still the same **recommend the best similar product/service to the end user** and to help them. 
+
+It is also estimated that the **market scope** for recommender system is expected to be approx 20-28 billion by 2030, currently in 2024 valued approx 6 billion US dollars. 
+
+Below are the two major types in Recommenders:
+1. Collaborative Filtering (User to User), and
+2. Content Based Filtering (Product to Product).
+
+Different Simple methods to identify user similarities:
+1. Correlations, 2. Cosine Similarities, 3. Jaccard Similarities, 4. Euclidean Distance, 5. Hamming Distance, 6. Manhatten Distance, 7. Bhattachryya Distance, 8. Neural Network Embeddings (Collaborative Filtering), 9. Kullback Leibler divergence, 10. Embeddings and Latent Features, 11. Sequence-Based Similarity, 12. Deep Collaborative Filtering with Embeddings (via Neural Networks), 13. Transformer Models for Sequential Recommendations (e.g. BERT4Rec), and 14. Other Hybrid Approches.
+
+**Data Sources:** Here, we will be leveraging RecBole libraries to explore various models and to develop more customizable one. 
+
+List of Different Varieties of Datasets: (Ref: https://recbole.io/)
+
+![image](https://github.com/user-attachments/assets/e842adf0-6eaa-48b7-9ffa-68312db0788e)
+
+-------------------------------------------------------------------------------------------------------------------------------------
+**Dataset 1: MovieLENS (100-K)**
+
+**Model: Bert4Rec**
+
+**Sample Input Datasets:**
+![image](https://github.com/user-attachments/assets/9a728e92-2d62-4f6e-b2cd-96080a482eb1)
+
+**Performance Optimization:** Comparision and Performance Results For All Approaches:
+1st set of results (To be fine tuned further)
+
+![image](https://github.com/user-attachments/assets/b2f78535-fe0f-419d-822d-57626102bd5f)
 
 **Evaluation Metrics:** To evaluate the model accuracy Recall 5, 10, Precision, NDCG will be used mainly. 
 
-Recall = How many relevant items recommended/Total No. of relevant items **available**
+Recall = How many relevant items recommended/Total No. of relevant items **available** (measures the relevance. )
 
-It measures the relevance. 
-
-Precision: How many relevant items recommended//Total No. of items **recommended**
-
-It measures the accuracy.
+Precision: How many relevant items recommended//Total No. of items **recommended** (measures the accuracy.)
 
 **Normalized Discounted Combined Gain (NDGC):** For Ranking.
 
+**Epochs:** How many times we process our complete data until we reach final/optimum goal. 
+
+**Learning rate:**, How fast did we adjust our weights to reach that optimum level.
+
+**Cold Start Problem** (For new users when we don't have data, 192 users): 
+Some of the commonly used approaches were:
+1. Clustering Approach,
+2. Profile Based (Meta Data) Approach,
+3. Hierarchical approach, and
+4. Novalty or Randomness Approach
+
+![image](https://github.com/user-attachments/assets/d157ae60-54c2-41e8-9bf3-e79e1250bc1b)
+
+Sample Output:
+![image](https://github.com/user-attachments/assets/ae41618e-a913-44c1-80d6-76d15a3faba3)
+
+
+**Logit Score:** Direct Score, before applying any activation funtions, non bounded ( can be larger and can go larger negative values). Higher the logit score, better the prediction is.
+
+**Probability:** Derived from logit score after applying softmax function (always between 0 to 1), probability is calculated across all the Items in the list, so it might seem to be less, distributed across all of them. 
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Model 2: (GRU4Rec)
+![image](https://github.com/user-attachments/assets/5efd7700-083e-4dfc-a73d-576a17de20a4)
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Model 3: (SAS4Rec)
+
+![image](https://github.com/user-attachments/assets/12d95ab8-3fc4-400c-a16f-9fdcfceef5d8)
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+**Recbole - Major Classifications:**
+
+Four Classifications: 
+
+1. General Recommendation (GR): Netflix use case which we discussed above. The interaction of users and items is the only data that can be used by model. Trained on implicit feedback data and evaluated using top-n recommendation. Collaborative filter (CF) based models are classified here. 
+
+2. Content-aware Recommendation: Amazon use case. Click-through rate prediction, CTR prediction. The dataset is explicit and contains label field. Evaluation conducted by binary classification.
+
+3. Sequential Recommendation: Spotify, similar to time series problem, which we discussed earlier. The task of SR (next-item recommendation) is the same as GR which sorts a list of items according to preference. History interactions are organized in sequences and the model tends to characterize the sequential data. Session-based recommendation are also included here.
+
+4. Knowledge-based Recommendation: Knowledge-based recommendation introduces an external knowledge graph to enhance general or sequential recommendation.
+
+SEO (Search Engine Optimization) and SEM techniques may also be merged, along with Google Adsense and adwords, to improve user experience further. 
+
+**Scope** For Recommendation Engines In Various Sectors:
+1. Energy Sectors, (Energy Saving Programs, Substations, CO2 Emission, Solar, Grid Automation, Sensor Meters, Electrical Products and HVAC transmission)
+2. Banking and Fintech sectors, (Wealth Management, Customized Credit Products, Investment Portfolio's, Equities, and Insurance plan recommendations)
+3. Technology and Service sectors, (Ecommerce Products)
+4. Entertainment and Gamification, (Custom Localization and Immersive Experience)
+5. Food, Beverages & Agriculture Industry (AI-based recommendations for improved crop yield, agricultural products, custom fertilizers, supply and demand forecasting, as well as weather and climate change insights using satellite data.)
+6. Healthcare and Pharmaceutical, 
+7. Aviation and Transportation, and 
+8. Other Specialized Sectors. 
 
 **Few Hugging Face models to be tested:**
 1. Transformers4Rec by NVIDIA: Integrates with Hugging Face Transformers, enabling the application of transformer architectures to sequential and session-based recommendation tasks.
@@ -77,3 +160,50 @@ It measures the accuracy.
 [16] Roy, D., Dutta, M. A systematic review and research perspective on recommender systems. J Big Data 9, 59 (2022). https://doi.org/10.1186/s40537-022-00592-5
 
 [17] A Comprehensive Review of Recommender Systems: Transitioning from Theory to Practice https://doi.org/10.48550/arXiv.2407.13699
+
+
+
+----------------------------------------
+
+Rough Workout's:
+
+To start with the basic example:
+
+Lets say, we have three best users, and all of them were having equal knowledge but totally different varities of interests:
+
+As a New User (Product/Service Buyer), may likes **Football, Hiking, Climbing, Animal Caretaking and Reading**
+
+Existing user A: Enjoys **Football, Hiking, Running, Animal Caretaker and Climbing**
+
+Existing user B: Prefer Singing, Writing and Reading.
+
+Existing user C: Likes Bicycling and Singing.  
+
+New user D: No Data, Cold Start Problem 
+
+----------------------------------------------------------------------------------------------------------------
+
+As an simple example, Clearly,  **User A** has similar interest more similar to new user and we would **assign more weightage **. (weights) 
+
+Now, its just about three users with eight different interest, which is easier for calculations. What would be the case if we have 100 million users and all of them were having 50,000 different varities of interesting data points. Then we may need to leverage the latest methods. 
+
+![image](https://github.com/user-attachments/assets/a102eda4-475a-42f1-a692-e90480215c5e)
+
+![image](https://github.com/user-attachments/assets/937a996b-487a-436b-8329-4b950d9cfad1)
+
+Singular Value Decomposition: (SVD to decompose the original matrices into three smaller matrices)
+![image](https://github.com/user-attachments/assets/50bac5cb-eae8-44f2-8ca0-270a69233eef)
+*Slight variations in the input matrices noted.
+
+
+Take Away from SVD:
+
+1. Higher positive values in the reconstructed matrix indicate stronger recommendations.
+
+2. For users or hobbies not strongly represented, values will remain closer to 0 or negative.
+
+In this case, (User to User): the horse buyer has atleast a good co-relation with User A (0.55 is a good start).
+
+Additionally (Content to Content) we can even recommend user A for "Reading", because of higher positive value (i.e. 0.96, refer last matrices User A and they doesn't have this habit of reading already).  
+
+It's a basic example and there are some drawbacks associated with it, like sparse zero values, curse of dimensionality and other limitations.
