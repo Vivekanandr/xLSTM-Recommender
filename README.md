@@ -1,4 +1,4 @@
-Audio Podcast Version: https://www.dropbox.com/scl/fi/zv511ysp0ecdaqbo9nskp/Recommender-Systems_-Architectures-Applications-and-Market-Analysis.wav?rlkey=3u9za3bbogvc0506ubxohxe2w&st=gy3ekapc&dl=0
+# Recommenders:
 
 At its core, a **recommendation engine** uses computer algorithms to predict and suggest items of interest to users based on their past behaviors and contextual data. On the deep learning front, xLSTM (extended LSTM) and Transformers have been evolved with latest architectures in recent years and plays a very important role in Large Language Models. 
 
@@ -12,10 +12,6 @@ A transformer-based recommender system uses an embedding layer to convert the us
 **Matrix Factorization Based:** It decompose a user-item interaction matrix into two smaller matrices: one representing users and the other representing items. These matrices capture latent factors (hidden patterns) that explain the user preferences and item characteristics. By reconstructing the original matrix, the system predicts how much a user might like an unseen item. Some techniques include SIngular Value Decomposition (SVD), Non-Negative Matrix Factorization (NMF) and Probabilistic Matrix Factorization (PMF).
 
 **Proposed Hybrid Methods & Noval Approaches:** xLSTM (extended LSTM) incorporates architectural enhancements like attention mechanism, gating improvments and bidirectional capabilities. It will be impactful due to several unique aspects when to compared to the traditional successful methods. 
-
-Value Proposition: The core concept and unique benefit is still the same **recommend the best similar product/service to the end user** and to help them. 
-
-It is also estimated that the **market scope** for recommender system is expected to be approx 20-28 billion by 2030, currently in 2024 valued approx 6 billion US dollars. 
 
 Below are the two major types in Recommenders:
 1. Collaborative Filtering (User to User), and
@@ -181,7 +177,7 @@ Existing user C: Likes Bicycling and Singing.
 
 New user D: No Data, Cold Start Problem 
 
-----------------------------------------------------------------------------------------------------------------
+---------------------
 
 As an simple example, Clearly,  **User A** has similar interest more similar to new user and we would **assign more weightage **. (weights) 
 
@@ -207,3 +203,10 @@ In this case, (User to User): the horse buyer has atleast a good co-relation wit
 Additionally (Content to Content) we can even recommend user A for "Reading", because of higher positive value (i.e. 0.96, refer last matrices User A and they doesn't have this habit of reading already).  
 
 It's a basic example and there are some drawbacks associated with it, like sparse zero values, curse of dimensionality and other limitations.
+
+Business Context: 
+Value Proposition: The core concept and unique benefit is still the same **recommend the best similar product/service to the end user** and to help them. 
+
+It is also estimated that the **market scope** for recommender system is expected to be approx 20-28 billion by 2030, currently in 2024 valued approx 6 billion US dollars. 
+
+Audio Podcast Version: https://www.dropbox.com/scl/fi/zv511ysp0ecdaqbo9nskp/Recommender-Systems_-Architectures-Applications-and-Market-Analysis.wav?rlkey=3u9za3bbogvc0506ubxohxe2w&st=gy3ekapc&dl=0
