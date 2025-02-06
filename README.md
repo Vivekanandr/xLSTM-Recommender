@@ -31,7 +31,7 @@ List of Different Varieties of Datasets: (Ref: https://recbole.io/)
 
 **Model: Bert4Rec**
 
-**Sample Input Datasets:**
+**Input Datasets:**
 ![image](https://github.com/user-attachments/assets/9a728e92-2d62-4f6e-b2cd-96080a482eb1)
 
 **Performance Optimization:** Comparision and Performance Results For All Approaches:
@@ -60,7 +60,7 @@ Some of the commonly used approaches were:
 
 ![image](https://github.com/user-attachments/assets/d157ae60-54c2-41e8-9bf3-e79e1250bc1b)
 
-Sample Output:
+Few Output Results:
 ![image](https://github.com/user-attachments/assets/ae41618e-a913-44c1-80d6-76d15a3faba3)
 
 
