@@ -37,6 +37,10 @@ List of Different Varieties of Datasets: (Ref: https://recbole.io/)
 **Performance Optimization:** Comparision and Performance Results For All Approaches:
 1st set of results (To be fine tuned further)
 
+![image](https://github.com/user-attachments/assets/e02f8dd3-2619-42c8-a375-c9fa423ea5c7)
+
+![image](https://github.com/user-attachments/assets/0ae5172a-30a1-45c7-8c28-bb75eca255af)
+
 ![image](https://github.com/user-attachments/assets/b2f78535-fe0f-419d-822d-57626102bd5f)
 
 **Evaluation Metrics:** To evaluate the model accuracy Recall 5, 10, Precision, NDCG will be used mainly. 
