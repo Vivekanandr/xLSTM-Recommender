@@ -37,6 +37,12 @@ List of Different Varieties of Datasets: (Ref: https://recbole.io/)
 **Performance Optimization:** Comparision and Performance Results For All Approaches:
 1st set of results (To be fine tuned further)
 
+
+xLSTM Model Flow Chart:
+
+![image](https://github.com/user-attachments/assets/248a53d2-855e-43d7-ba8b-0f0446846232)
+
+
 xLSTM Results:
 
 ![image](https://github.com/user-attachments/assets/e02f8dd3-2619-42c8-a375-c9fa423ea5c7)
