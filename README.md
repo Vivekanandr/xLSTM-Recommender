@@ -134,6 +134,8 @@ SEO (Search Engine Optimization) and SEM techniques may also be merged, along wi
 
 3. RecGPT: RecGPT is a domain-adapted large language model specifically trained for text-based recommendation tasks.
 
+**MLops:** ML Flow, Wandb for model training, deployment and testing
+
 **References:**
 
 [1] xLSTM: Extended Long Short-Term Memory: https://arxiv.org/pdf/2405.04517
