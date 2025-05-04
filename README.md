@@ -180,28 +180,6 @@ SEO (Search Engine Optimization) and SEM techniques may also be merged, along wi
 
 ----------------------------------------
 
-Rough Workout's:
-
-To start with the basic example:
-
-Lets say, we have three best users, and all of them were having equal knowledge but totally different varities of interests:
-
-As a New User (Product/Service Buyer), may likes **Football, Hiking, Climbing, Animal Caretaking and Reading**
-
-Existing user A: Enjoys **Football, Hiking, Running, Animal Caretaker and Climbing**
-
-Existing user B: Prefer Singing, Writing and Reading.
-
-Existing user C: Likes Bicycling and Singing.  
-
-New user D: No Data, Cold Start Problem 
-
----------------------
-
-As an simple example, Clearly,  **User A** has similar interest more similar to new user and we would **assign more weightage **. (weights) 
-
-Now, its just about three users with eight different interest, which is easier for calculations. What would be the case if we have 100 million users and all of them were having 50,000 different varities of interesting data points. Then we may need to leverage the latest methods. 
-
 ![image](https://github.com/user-attachments/assets/a102eda4-475a-42f1-a692-e90480215c5e)
 
 ![image](https://github.com/user-attachments/assets/937a996b-487a-436b-8329-4b950d9cfad1)
