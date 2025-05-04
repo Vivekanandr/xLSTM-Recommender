@@ -193,14 +193,10 @@ Take Away from SVD:
 
 2. For users or hobbies not strongly represented, values will remain closer to 0 or negative.
 
-In this case, (User to User): the horse buyer has atleast a good co-relation with User A (0.55 is a good start).
-
-Additionally (Content to Content) we can even recommend user A for "Reading", because of higher positive value (i.e. 0.96, refer last matrices User A and they doesn't have this habit of reading already).  
-
-It's a basic example and there are some drawbacks associated with it, like sparse zero values, curse of dimensionality and other limitations.
 
 Business Context: 
-Value Proposition: The core concept and unique benefit is still the same **recommend the best similar product/service to the end user** and to help them. 
+
+Value Proposition: The core concept and unique benefit is to **recommend the best similar product/service to the end user** and to help them. 
 
 It is also estimated that the **market scope** for recommender system is expected to be approx 20-28 billion by 2030, currently in 2024 valued approx 6 billion US dollars. 
 
