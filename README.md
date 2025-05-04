@@ -180,7 +180,7 @@ SEO (Search Engine Optimization) and SEM techniques may also be merged, along wi
 
 ----------------------------------------
 
-![image](https://github.com/user-attachments/assets/a102eda4-475a-42f1-a692-e90480215c5e)
+**Rough Workouts:**
 
 ![image](https://github.com/user-attachments/assets/937a996b-487a-436b-8329-4b950d9cfad1)
 
