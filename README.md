@@ -182,8 +182,6 @@ SEO (Search Engine Optimization) and SEM techniques may also be merged, along wi
 
 **Rough Workouts:**
 
-![image](https://github.com/user-attachments/assets/937a996b-487a-436b-8329-4b950d9cfad1)
-
 Singular Value Decomposition: (SVD to decompose the original matrices into three smaller matrices)
 ![image](https://github.com/user-attachments/assets/50bac5cb-eae8-44f2-8ca0-270a69233eef)
 *Slight variations in the input matrices noted.
