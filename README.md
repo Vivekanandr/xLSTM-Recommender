@@ -43,7 +43,7 @@ xLSTM Model Flow Chart:
 ![image](https://github.com/user-attachments/assets/248a53d2-855e-43d7-ba8b-0f0446846232)
 
 
-xLSTM Results:
+xLSTM Results: (MovieLENS 100-k)
 
 ![image](https://github.com/user-attachments/assets/e02f8dd3-2619-42c8-a375-c9fa423ea5c7)
 
@@ -94,16 +94,22 @@ Few Output Results:
 
 
 -------------------------------------------------------------------------------------------------------------------------------------
-Model 2: (GRU4Rec)
+Model 2: (GRU4Rec - MovieLENS 100K)
 ![image](https://github.com/user-attachments/assets/5efd7700-083e-4dfc-a73d-576a17de20a4)
 
 
 --------------------------------------------------------------------------------------------------------------------------------------
-Model 3: (SAS4Rec)
+Model 3: (SAS4Rec - MovieLENS 100K)
 
 ![image](https://github.com/user-attachments/assets/12d95ab8-3fc4-400c-a16f-9fdcfceef5d8)
 
 --------------------------------------------------------------------------------------------------------------------------------------
+
+Model 4: (Bert4Rec Steam Data)
+
+![image](https://github.com/user-attachments/assets/e3fd6c5f-c5a5-4e20-b1cc-c78a91a442f2)
+
+---------------------------------------------------------------------------------------
 
 **Baseline Model Results (For comparision)**
 
