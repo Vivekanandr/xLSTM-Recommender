@@ -71,6 +71,17 @@ Some of the commonly used approaches were:
 3. Hierarchical approach, and
 4. Novalty or Randomness Approach
 
+**Feature Focus:**
+
+A. User-level features (e.g., user age, gender, occupation)
+B. Item-level features (e.g., genres, title metadata)
+C. Time or position embeddings beyond fixed positional indices
+D. Temporal dynamics (e.g., timestamp-based recency)
+
+**Performance Optimization:**
+
+A. Implement Leave-One-Out Splitting, B. Integrate Negative Sampling.
+
 ![image](https://github.com/user-attachments/assets/d157ae60-54c2-41e8-9bf3-e79e1250bc1b)
 
 Few Output Results:
