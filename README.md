@@ -36,11 +36,25 @@ List of Different Varieties of Datasets: (Ref: https://recbole.io/)
 
 **Performance Optimization:** Comparision and Performance Results For All Approaches:
 1st set of results (To be fine tuned further)
+![image](https://github.com/user-attachments/assets/c73f24ed-737f-40c0-b530-436b40d56b75)
 
 
-xLSTM Model Flow Chart:
+**xLSTM Model Flow Chart:**
 
 ![image](https://github.com/user-attachments/assets/248a53d2-855e-43d7-ba8b-0f0446846232)
+
+
+**xLSTM Results: (MovieLENS 1M)**
+
+![image](https://github.com/user-attachments/assets/a98049b0-17d2-45b4-88e0-841777c7ea71)
+
+**Results Interpretations:**
+
+Recall@10 = 0.2932, Meaning: In ~29.3% of cases, the true next item appears in the top 10 predictions. Solid result for a baseline xLSTM model. It means if we recommend 10 movies, ~3 times out of 10, the correct one will be in that list.
+
+MRR@10 = 0.1266, Mean Reciprocal Rank: Measures the position of the first correct item in the top-10 list. On average, the correct item appears around position 8 (1/0.1266 ≈ 7.9). Higher MRR means better ranking of correct items.
+
+NDCG@10 = 0.1655, Normalized Discounted Cumulative Gain: Measures both relevance and position in the ranked list. A higher value means the model is not just retrieving the right item, but ranking it closer to the top. At ~16.5% of the optimal ranking gain. Good enough for an initial run,better results when its finetunes over 200 epochs.
 
 
 xLSTM Results: (MovieLENS 100-k)
