@@ -278,17 +278,8 @@ SEO (Search Engine Optimization) and SEM techniques may also be merged, along wi
 
 **Few Hugging Face models to be tested:**
 1. Transformers4Rec by NVIDIA: Integrates with Hugging Face Transformers, enabling the application of transformer architectures to sequential and session-based recommendation tasks.
-                  transformer_config = tfr.TransformerBlock(
-   
-                   d_model=64,  # Embedding dimension
-   
-                   n_head=4,    # Number of attention heads
-   
-                   num_layers=2  # Number of transformer layers)
 
-           Embedding dimension, Attention Heads, Transformer layers - Working examples to be added
-
-3. RecGPT: RecGPT is a domain-adapted large language model specifically trained for text-based recommendation tasks.
+2. RecGPT: RecGPT is a domain-adapted large language model specifically trained for text-based recommendation tasks.
 
 **MLops:** ML Flow, Wandb for model training, deployment and testing
 
