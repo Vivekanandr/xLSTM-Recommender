@@ -41,30 +41,7 @@ List of Different Varieties of Datasets: (Ref: https://recbole.io/)
 
 **xLSTM Model Flow Chart:**
 
-![image](https://github.com/user-attachments/assets/248a53d2-855e-43d7-ba8b-0f0446846232)
-
-
-**xLSTM Results: (MovieLENS 1M)**
-
-![image](https://github.com/user-attachments/assets/a98049b0-17d2-45b4-88e0-841777c7ea71)
-
-**Results Interpretations:**
-
-Recall@10 = 0.2932, Meaning: In ~29.3% of cases, the true next item appears in the top 10 predictions. Solid result for a baseline xLSTM model. It means if we recommend 10 movies, ~3 times out of 10, the correct one will be in that list.
-
-MRR@10 = 0.1266, Mean Reciprocal Rank: Measures the position of the first correct item in the top-10 list. On average, the correct item appears around position 8 (1/0.1266 ≈ 7.9). Higher MRR means better ranking of correct items.
-
-NDCG@10 = 0.1655, Normalized Discounted Cumulative Gain: Measures both relevance and position in the ranked list. A higher value means the model is not just retrieving the right item, but ranking it closer to the top. At ~16.5% of the optimal ranking gain. Good enough for an initial run,better results when its finetunes over 200 epochs.
-
-
-xLSTM Results: (MovieLENS 100-k)
-
-![image](https://github.com/user-attachments/assets/e02f8dd3-2619-42c8-a375-c9fa423ea5c7)
-
-![image](https://github.com/user-attachments/assets/0ae5172a-30a1-45c7-8c28-bb75eca255af)
-
-
-xLSTM Flow Chart and model explanation in 23 steps:
+Model Explnation in 23 steps: 
 
 Step 1: User watches a sequence of movies: e.g., \[Die Hard, Terminator, Lethal Weapon].
 
@@ -184,6 +161,28 @@ Step 23: This pipeline can be repeated for other users, continuously learning pa
 * Why: Model retraining or online learning allows adapting to evolving user preferences.
 * How: New interaction logs are appended to training data and the model is updated accordingly.
 
+
+![image](https://github.com/user-attachments/assets/248a53d2-855e-43d7-ba8b-0f0446846232)
+
+
+**xLSTM Results: (MovieLENS 1M)**
+
+![image](https://github.com/user-attachments/assets/a98049b0-17d2-45b4-88e0-841777c7ea71)
+
+**Results Interpretations:**
+
+Recall@10 = 0.2932, Meaning: In ~29.3% of cases, the true next item appears in the top 10 predictions. Solid result for a baseline xLSTM model. It means if we recommend 10 movies, ~3 times out of 10, the correct one will be in that list.
+
+MRR@10 = 0.1266, Mean Reciprocal Rank: Measures the position of the first correct item in the top-10 list. On average, the correct item appears around position 8 (1/0.1266 ≈ 7.9). Higher MRR means better ranking of correct items.
+
+NDCG@10 = 0.1655, Normalized Discounted Cumulative Gain: Measures both relevance and position in the ranked list. A higher value means the model is not just retrieving the right item, but ranking it closer to the top. At ~16.5% of the optimal ranking gain. Good enough for an initial run,better results when its finetunes over 200 epochs.
+
+
+xLSTM Results: (MovieLENS 100-k)
+
+![image](https://github.com/user-attachments/assets/e02f8dd3-2619-42c8-a375-c9fa423ea5c7)
+
+![image](https://github.com/user-attachments/assets/0ae5172a-30a1-45c7-8c28-bb75eca255af)
 
 Other Model: 
 ![image](https://github.com/user-attachments/assets/b2f78535-fe0f-419d-822d-57626102bd5f)
