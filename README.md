@@ -162,7 +162,7 @@ Step 23: This pipeline can be repeated for other users, continuously learning pa
 * How: New interaction logs are appended to training data and the model is updated accordingly.
 
 
-Model Architecture Hyperparameters at a glance: (xLSTMLargeConfig — Advanced Configuration with Theoretical Justifications)
+**Model Architecture Hyperparameters at a glance:** (xLSTMLargeConfig — Advanced Configuration with Theoretical Justifications)
 
 1. embedding_dim=128
 	• What it does: Specifies the dimensionality of learned vector representations for discrete input tokens (e.g., movie IDs).
@@ -241,6 +241,65 @@ Model Architecture Hyperparameters at a glance: (xLSTMLargeConfig — Advanced C
 	• Alternatives:
 		○ "torch": Simplified fallback, better suited for testing and interpretability.
 	• When to use: Triton in real-time systems or batch decoding tasks.
+
+
+**Training Objective + Optimizer + Scheduler Breakdown**
+
+Step 1: criterion = nn.CrossEntropyLoss()
+	• What it does: Defines the loss function used to measure how well the model’s predictions match the ground truth.
+	• Why: CrossEntropyLoss is mathematically equivalent to maximizing the log-likelihood of the true class (movie index) in a multi-class classification setting. It's standard for categorical prediction tasks where only one true label exists.
+	• How it works:
+		○ Applies log(softmax(logits)) internally.
+		○ Penalizes the model if the predicted probability for the true label is low.
+	• Alternatives:
+		○ nn.NLLLoss: Use with explicit log_softmax output.
+		○ FocalLoss: For class-imbalance-sensitive training.
+	• Recommended for MovieLens:
+		○ ✅ MovieLens 100K → CrossEntropyLoss (default, reliable).
+		○ ✅ MovieLens 1M / 20M → Still effective. Consider FocalLoss if popularity imbalance is extreme.
+
+Step 2: optimizer = optim.Adam(model.parameters(), lr=0.001)
+	• What it does: Specifies the optimizer that updates model weights based on computed gradients.
+	• Why: Adam (Adaptive Moment Estimation) uses first- and second-order moments to adjust the learning rate per parameter. It converges faster and more stably than SGD in many cases.
+	• How it works:
+		○ Tracks moving averages of gradients and squared gradients.
+		○ Adapts learning rate per parameter dynamically.
+	• Alternatives:
+		○ SGD: Simpler, requires more tuning.
+		○ AdamW: Weight-decay decoupled Adam, more robust for regularization.
+		○ RMSProp: Useful in recurrent networks, though less common now.
+	• Recommended:
+		○ ✅ MovieLens 100K → Adam(lr=1e-3)
+		○ ✅ MovieLens 1M → AdamW(lr=3e-4)
+		○ ✅ MovieLens 20M → AdamW(lr=1e-4) or scheduled warm-up
+
+Step 3: scheduler = StepLR(optimizer, step_size=5, gamma=0.5)
+	• What it does: Decays the learning rate every 5 epochs by multiplying it by 0.5.
+	• Why: Learning rate scheduling helps escape local minima early and encourages fine-tuning as training progresses. Reducing LR gradually allows stable convergence.
+	• How it works:
+		○ Epochs 1–5: LR = 0.001
+		○ Epochs 6–10: LR = 0.0005
+		○ ... continues halving every step_size
+	• Alternatives:
+		○ CosineAnnealingLR: Smoothly decays LR to a minimum.
+		○ ReduceLROnPlateau: Adaptive decay based on validation loss.
+		○ OneCycleLR: Aggressive LR scheduling, good for fast convergence.
+	• Recommended:
+		○ MovieLens 100K → StepLR(step_size=5, gamma=0.5) ✅
+		○ MovieLens 1M → ReduceLROnPlateau(patience=3) or CosineAnnealing
+		○ MovieLens 20M → OneCycleLR for faster training with controlled generalization
+
+Step 4: recall_list, mrr_list, ndcg_list = [], [], []
+	• What it does: Initializes lists to store evaluation metrics per epoch for validation and test sets.
+	• Why: Tracking Recall@K, MRR@K, and NDCG@K helps monitor ranking quality and ensure model performance is improving.
+	• How it works:
+		○ After each epoch, predictions are collected.
+		○ Top-k metrics are computed and stored.
+	• Alternatives:
+		○ Store in a dict or log with wandb, TensorBoard, etc.
+	• Recommended:
+Always collect these metrics for any recommendation system.
+These are standard KPIs for top-N recommendation tasks.
 
 
 
