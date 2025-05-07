@@ -243,7 +243,7 @@ Step 23: This pipeline can be repeated for other users, continuously learning pa
 	• When to use: Triton in real-time systems or batch decoding tasks.
 
 
-**Training Objective + Optimizer + Scheduler Breakdown**
+**Training Objective + Optimizer + Scheduler Breakdown at a glance**
 
 Step 1: criterion = nn.CrossEntropyLoss()
 	• What it does: Defines the loss function used to measure how well the model’s predictions match the ground truth.
@@ -255,8 +255,8 @@ Step 1: criterion = nn.CrossEntropyLoss()
 		○ nn.NLLLoss: Use with explicit log_softmax output.
 		○ FocalLoss: For class-imbalance-sensitive training.
 	• Recommended for MovieLens:
-		○ ✅ MovieLens 100K → CrossEntropyLoss (default, reliable).
-		○ ✅ MovieLens 1M / 20M → Still effective. Consider FocalLoss if popularity imbalance is extreme.
+		○ MovieLens 100K → CrossEntropyLoss (default, reliable).
+		○ MovieLens 1M / 20M → Still effective. Consider FocalLoss if popularity imbalance is extreme.
 
 Step 2: optimizer = optim.Adam(model.parameters(), lr=0.001)
 	• What it does: Specifies the optimizer that updates model weights based on computed gradients.
@@ -269,9 +269,9 @@ Step 2: optimizer = optim.Adam(model.parameters(), lr=0.001)
 		○ AdamW: Weight-decay decoupled Adam, more robust for regularization.
 		○ RMSProp: Useful in recurrent networks, though less common now.
 	• Recommended:
-		○ ✅ MovieLens 100K → Adam(lr=1e-3)
-		○ ✅ MovieLens 1M → AdamW(lr=3e-4)
-		○ ✅ MovieLens 20M → AdamW(lr=1e-4) or scheduled warm-up
+		○ MovieLens 100K → Adam(lr=1e-3)
+		○ MovieLens 1M → AdamW(lr=3e-4)
+		○ MovieLens 20M → AdamW(lr=1e-4) or scheduled warm-up
 
 Step 3: scheduler = StepLR(optimizer, step_size=5, gamma=0.5)
 	• What it does: Decays the learning rate every 5 epochs by multiplying it by 0.5.
@@ -285,7 +285,7 @@ Step 3: scheduler = StepLR(optimizer, step_size=5, gamma=0.5)
 		○ ReduceLROnPlateau: Adaptive decay based on validation loss.
 		○ OneCycleLR: Aggressive LR scheduling, good for fast convergence.
 	• Recommended:
-		○ MovieLens 100K → StepLR(step_size=5, gamma=0.5) ✅
+		○ MovieLens 100K → StepLR(step_size=5, gamma=0.5) 
 		○ MovieLens 1M → ReduceLROnPlateau(patience=3) or CosineAnnealing
 		○ MovieLens 20M → OneCycleLR for faster training with controlled generalization
 
@@ -297,9 +297,8 @@ Step 4: recall_list, mrr_list, ndcg_list = [], [], []
 		○ Top-k metrics are computed and stored.
 	• Alternatives:
 		○ Store in a dict or log with wandb, TensorBoard, etc.
-	• Recommended:
-Always collect these metrics for any recommendation system.
-These are standard KPIs for top-N recommendation tasks.
+
+
 
 
 
