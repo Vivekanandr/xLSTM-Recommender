@@ -162,7 +162,7 @@ Step 23: This pipeline can be repeated for other users, continuously learning pa
 * How: New interaction logs are appended to training data and the model is updated accordingly.
 
 
-![image](https://github.com/user-attachments/assets/248a53d2-855e-43d7-ba8b-0f0446846232)
+![image](https://github.com/user-attachments/assets/1e9163a7-ca51-4c08-ab80-8cb229713983)
 
 
 **xLSTM Results: (MovieLENS 1M)**
