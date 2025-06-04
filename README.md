@@ -1,6 +1,6 @@
 # Recommenders:
 
-Latest Verion: xLSTM_v8.6_1M.ipynb, xLSTM_v8.6_10M.ipynb
+**Latest Version:** xLSTM_v8.6_1M.ipynb, xLSTM_v8.6_10M.ipynb
 
 At its core, a **recommendation engine** uses computer algorithms to predict and suggest items of interest to users based on their past behaviors and contextual data. On the deep learning front, xLSTM (extended LSTM) and Transformers have been evolved with latest architectures in recent years and plays a very important role in Large Language Models...
 
