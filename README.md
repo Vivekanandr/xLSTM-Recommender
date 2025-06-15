@@ -2,11 +2,11 @@
 
 **Research Thesis Topic:** xLSTM Architecture's For Recommendations
 
-This script trains a sequential recommender system on a user-specified/customizable MovieLens dataset (100K, 1M, 10M, or 20M).
+This script trains a sequential recommender system on a **user-specified/customizable MovieLens dataset** (100K, 1M, 10M, or 20M).
 
 It preprocesses the data, maps user/item IDs, and splits interactions into train/validation/test sequences.
 
-Users can select among four models: standard LSTM, xLSTM, BERT4REC, SAS4REC variant with configurable parameters.
+Users can select among **four models: standard LSTM, xLSTM, BERT4REC, SAS4REC** variant with configurable parameters.
 
 The selected model is trained using PyTorch with evaluation metrics like Recall@10, MRR, Hit Rate and NDCG.
 
