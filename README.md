@@ -1,10 +1,6 @@
-# Recommenders:
+**Recommender System: Multi-Model Introduction**
 
-**Folder: Best Models** ( Contains best model for inferencing, v4 is latest)
-
-**Folder: Runs** (Contains all the recent Run History with 8 different performance attributes (Recall, Hit Rate, GPU Performance, Epoch Run Time, Total Parameters etc.)
-
-****Latest Model File: ** Recommender System: Multi-Model Introduction**
+**Research Thesis Topic:** xLSTM Architecture's For Recommendations
 
 This script trains a sequential recommender system on a user-specified/customizable MovieLens dataset (100K, 1M, 10M, or 20M).
 
@@ -75,6 +71,9 @@ torch: 2.7.1
 torchvision: 0.22.1
 torchaudio: 2.7.1
 
+**Folder: Best Models** ( Contains best model for inferencing, v4 is latest)
+
+**Folder: Runs** (Contains all the recent Run History with 8 different performance attributes (Recall, Hit Rate, GPU Performance, Epoch Run Time, Total Parameters etc.)
 
 **Detailed Description:**
 
