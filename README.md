@@ -1,6 +1,82 @@
 # Recommenders:
 
-**Latest Version:** xLSTM_v8.6_1M.ipynb, xLSTM_v8.6_10M.ipynb
+**Folder: Best Models** ( Contains best model for inferencing, v4 is latest)
+
+**Folder: Runs** (Contains all the recent Run History with 8 different performance attributes (Recall, Hit Rate, GPU Performance, Epoch Run Time, Total Parameters etc.)
+
+****Latest Model File: ** Recommender System: Multi-Model Introduction**
+
+This script trains a sequential recommender system on a user-specified/customizable MovieLens dataset (100K, 1M, 10M, or 20M).
+
+It preprocesses the data, maps user/item IDs, and splits interactions into train/validation/test sequences.
+
+Users can select among four models: standard LSTM, xLSTM, BERT4REC, SAS4REC variant with configurable parameters.
+
+The selected model is trained using PyTorch with evaluation metrics like Recall@10, MRR, Hit Rate and NDCG.
+
+After training, the best model is used to predict and display top-10 movie recommendations based on user history.
+
+
+**Training script that integrates:**
+
+A. Dynamic dataset selection (100K, 1M, 10M, 20M)
+
+B. Multiple model choices (LSTM, xLSTM, BERT4Rec, SASRec)
+
+C. Dataset-specific hyperparameters (xlstm_params, dataloader_params)
+
+D. TensorBoard logging
+
+E. GPU monitoring
+
+F. Evaluation metrics (Recall@10, MRR, NDCG)
+
+G. Early stopping + best model saving
+
+H. Easy-readable prediction logging with movie titles
+
+
+**Few Research Focus Areas/Questions:**
+
+1. Embedding Saturation and Utilization: Are larger embeddings really helping the model learn better user/item relationships, or are they underutilized?
+
+2. Gradient Stability / Exploding Gradients: Do longer sequences introduce more instability or gradient explosion?
+
+3. Computation-Time vs Performance Trade-off: At what point does longer sequence input hurt speed more than it helps accuracy?
+
+4. Effective Sequence Length vs. Truncation: How much of the input sequence is actually contributing to predictions?
+
+5. Overfitting Signals: Do longer sequences encourage memorization rather than generalization?
+
+6. Top-k Diversity / Coverage: Does sequence length affect recommendation diversity or item popularity bias?
+
+7. Token Usage Heatmap: Where in the sequence is the model focusing? More recent items or early ones?
+
+8. Ablation Logging: How much performance drop occurs when certain features are turned off?
+
+
+**Initial Setup Requirements**
+
+A. Install Necessary Packages (in quite mode)
+
+B. Triton Activation For GPU Acceleration (To make sure Triton and GPU Accerleration, to speed up the training process)
+
+C. Select the necessary model and datasets (Model)
+
+D. Run all would work, to change the model and datasets, please adjust the variable in the main script.
+
+E. Script is mainly desinged for Colab Environment, for A100 GPU. Single click solution.
+
+
+**Requirements:**
+mlstm_kernels: 2.0.0
+xlstm: 2.0.4
+torch: 2.7.1
+torchvision: 0.22.1
+torchaudio: 2.7.1
+
+
+**Detailed Description:**
 
 At its core, a **recommendation engine** uses computer algorithms to predict and suggest items of interest to users based on their past behaviors and contextual data. On the deep learning front, xLSTM (extended LSTM) and Transformers have been evolved with latest architectures in recent years and plays a very important role in Large Language Models..
 
