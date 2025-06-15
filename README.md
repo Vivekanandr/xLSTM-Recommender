@@ -320,15 +320,6 @@ MRR@10 = 0.1266, Mean Reciprocal Rank: Measures the position of the first correc
 NDCG@10 = 0.1655, Normalized Discounted Cumulative Gain: Measures both relevance and position in the ranked list. A higher value means the model is not just retrieving the right item, but ranking it closer to the top. At ~16.5% of the optimal ranking gain. Good enough for an initial run,better results when its finetunes over 200 epochs.
 
 
-xLSTM Results: (MovieLENS 100-k)
-
-![image](https://github.com/user-attachments/assets/e02f8dd3-2619-42c8-a375-c9fa423ea5c7)
-
-![image](https://github.com/user-attachments/assets/0ae5172a-30a1-45c7-8c28-bb75eca255af)
-
-Other Model: 
-![image](https://github.com/user-attachments/assets/b2f78535-fe0f-419d-822d-57626102bd5f)
-
 **Evaluation Metrics:** To evaluate the model accuracy Recall 5, 10, Precision, NDCG will be used mainly. 
 
 Recall = How many relevant items recommended/Total No. of relevant items **available** (measures the relevance. )
@@ -368,23 +359,6 @@ Few Output Results:
 **Logit Score:** Direct Score, before applying any activation funtions, non bounded ( can be larger and can go larger negative values). Higher the logit score, better the prediction is.
 
 **Probability:** Derived from logit score after applying softmax function (always between 0 to 1), probability is calculated across all the Items in the list, so it might seem to be less, distributed across all of them. 
-
-
--------------------------------------------------------------------------------------------------------------------------------------
-Model 2: (GRU4Rec - MovieLENS 100K)
-![image](https://github.com/user-attachments/assets/5efd7700-083e-4dfc-a73d-576a17de20a4)
-
-
---------------------------------------------------------------------------------------------------------------------------------------
-Model 3: (SAS4Rec - MovieLENS 100K)
-
-![image](https://github.com/user-attachments/assets/12d95ab8-3fc4-400c-a16f-9fdcfceef5d8)
-
---------------------------------------------------------------------------------------------------------------------------------------
-
-Model 4: (Bert4Rec Steam Data)
-
-![image](https://github.com/user-attachments/assets/e3fd6c5f-c5a5-4e20-b1cc-c78a91a442f2)
 
 ---------------------------------------------------------------------------------------
 
