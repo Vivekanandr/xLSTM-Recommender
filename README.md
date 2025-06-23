@@ -63,6 +63,31 @@ D. Run all would work, to change the model and datasets, please adjust the varia
 
 E. Script is mainly desinged for Colab Environment, for A100 GPU. Single click solution.
 
+**Methodology**
+
+**Experimental Setup::**
+1. Datasets: MovieLens (100K, 1M, 10M, Steam)
+
+2. Models Evaluated: xLSTM, BERT4Rec, SASRec
+
+3. Custom configs for each dataset/model
+
+4. Configuration: Custom hyperparameters tuned for each dataset-model combination
+
+**Systems Features:**
+
+1. GPU-accelerated training (NVIDIA A100, Triton-backed kernels for xLSTM), Comprehensive TensorBoard Logging.
+
+2. Early stopping (patience = 3 epochs) with best model checkpointing
+
+3. Real-time Top-K recommendation outputs with movie title
+
+**Training Workflow:**
+1. User and Item ID remapping for compact indexing
+2. Temporal sequence splitting (Train/Validation/Test) 
+3. Random seeds applied (42, 123, 2023) to ensure statistical reproducibility 
+4. Early stopping triggered based on Recall@10 Improvments
+
 
 **Requirements:**
 mlstm_kernels: 2.0.0
@@ -75,6 +100,22 @@ torchaudio: 2.7.1
 
 **Folder: Runs** (Contains all the recent Run History with 8 different performance attributes (Recall, Hit Rate, GPU Performance, Epoch Run Time, Total Parameters etc.)
 
+**Model Results:**
+
+![image](https://github.com/user-attachments/assets/6f7ac3ad-644c-4c1c-ae27-f84ca410dd2d)
+
+**Conclusion from Results:**
+
+A. xLSTM evaluated under a novel configuration for Sequencial recommenders; observed performance on various conditions.
+
+B. Performance Scaling (RQ1): xLSTM matches BERT4Rec's Recall@10 (~26-27%) on the 1M dataset, indicating scalability with richer interaction histories. Performance converges as dataset size grows.
+
+C. Sequence Sensitivity (RQ2): Standard deviation increases with sequence length, underscoring sensitivity to input length variations.
+
+D. Trade-offs (RQ3): xLSTM achieves competitive accuracy on large datasets but incurs higher computational costs, especially in smaller-scale scenarios.
+
+
+----------------------------------------
 **Detailed Description:**
 
 **Introduction to Recommender Systems:**
