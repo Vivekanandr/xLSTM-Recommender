@@ -1,4 +1,5 @@
-![image](https://github.com/user-attachments/assets/fb2b41c0-ca28-41f4-940b-850e2844ba44)**Recommender System: Multi-Model Introduction**
+
+**Recommender System: Multi-Model Introduction**
 
 **Research Thesis Topic:** xLSTM Architecture's For Recommendations
 
