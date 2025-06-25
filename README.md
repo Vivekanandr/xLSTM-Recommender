@@ -1,4 +1,4 @@
-**Recommender System: Multi-Model Introduction**
+![image](https://github.com/user-attachments/assets/fb2b41c0-ca28-41f4-940b-850e2844ba44)**Recommender System: Multi-Model Introduction**
 
 **Research Thesis Topic:** xLSTM Architecture's For Recommendations
 
@@ -114,6 +114,14 @@ C. Sequence Sensitivity (RQ2): Standard deviation increases with sequence length
 
 D. Trade-offs (RQ3): xLSTM achieves competitive accuracy on large datasets but incurs higher computational costs, especially in smaller-scale scenarios.
 
+**Model Architecture:**
+
+![image](https://github.com/user-attachments/assets/19974b3e-3a01-4f0d-b53e-084b1e71bb85)
+
+Parameters for 100K:
+
+![image](https://github.com/user-attachments/assets/118bdb82-813f-44bb-816f-cdc8d6d7b70a)
+
 
 ----------------------------------------
 **Detailed Description:**
@@ -147,9 +155,9 @@ List of Different Varieties of Datasets: (Ref: https://recbole.io/)
 ![image](https://github.com/user-attachments/assets/e842adf0-6eaa-48b7-9ffa-68312db0788e)
 
 -------------------------------------------------------------------------------------------------------------------------------------
-**Dataset 1: MovieLENS (100-K)**
 
-**Model: Bert4Rec**
+
+**1. Model: Bert4Rec**
 
 **Input Datasets:**
 ![image](https://github.com/user-attachments/assets/9a728e92-2d62-4f6e-b2cd-96080a482eb1)
@@ -159,7 +167,13 @@ List of Different Varieties of Datasets: (Ref: https://recbole.io/)
 ![image](https://github.com/user-attachments/assets/c73f24ed-737f-40c0-b530-436b40d56b75)
 
 
-**xLSTM Model Flow Chart:**
+Parameters: (100K)
+
+![image](https://github.com/user-attachments/assets/997b5bae-a9c0-469d-9fe9-90b3ca638420)
+
+
+---------------------------
+**2. xLSTM Model Flow Chart:**
 
 Model Explanation in 23 steps: (Process)
 
@@ -477,6 +491,15 @@ Few Output Results:
 **Logit Score:** Direct Score, before applying any activation funtions, non bounded ( can be larger and can go larger negative values). Higher the logit score, better the prediction is.
 
 **Probability:** Derived from logit score after applying softmax function (always between 0 to 1), probability is calculated across all the Items in the list, so it might seem to be less, distributed across all of them. 
+
+---------------------------------------------------------------------------------------
+
+Model 3: SAS4REc
+
+![image](https://github.com/user-attachments/assets/71151f53-044f-4b3f-bdca-4f6f58cd1cc8)
+
+![image](https://github.com/user-attachments/assets/737caf83-13e1-4630-b471-0caf53a1ebe1)
+
 
 ---------------------------------------------------------------------------------------
 
