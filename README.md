@@ -119,9 +119,9 @@ D. Trade-offs (RQ3): xLSTM achieves competitive accuracy on large datasets but i
 
 ![image](https://github.com/user-attachments/assets/19974b3e-3a01-4f0d-b53e-084b1e71bb85)
 
-Parameters for 100K:
+Parameters:
 
-![image](https://github.com/user-attachments/assets/118bdb82-813f-44bb-816f-cdc8d6d7b70a)
+![image](https://github.com/user-attachments/assets/e04d9637-be3b-4f91-a2f0-478a7f6dae8f)
 
 
 ----------------------------------------
