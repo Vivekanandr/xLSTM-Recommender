@@ -124,6 +124,10 @@ Parameters:
 ![image](https://github.com/user-attachments/assets/e04d9637-be3b-4f91-a2f0-478a7f6dae8f)
 
 
+xLSTM 10M Performance:
+
+<img width="1561" height="382" alt="image" src="https://github.com/user-attachments/assets/7821c08e-57ea-444f-bc97-6c995903d22f" />
+
 ---------------------------------------
 
 <img width="1013" height="767" alt="image" src="https://github.com/user-attachments/assets/aa10ee00-ee03-43a8-a06b-cc8064551ca1" />
