@@ -498,6 +498,7 @@ D. Temporal dynamics (e.g., timestamp-based recency)
 
 <img width="796" height="550" alt="image" src="https://github.com/user-attachments/assets/9fe45e9e-60e6-49ee-81a3-34c33eec8240" />
 
+100K: Models are strong on head (popular) items but underperform on long-tail (diverse) items.
 
 **To study the popularity bias:**
 
