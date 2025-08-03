@@ -496,6 +496,9 @@ D. Temporal dynamics (e.g., timestamp-based recency)
 
 # Popularity bias (if a few items always appear), # Low diversity in predictions, # Whether the model is overfitting to frequent items
 
+<img width="796" height="550" alt="image" src="https://github.com/user-attachments/assets/9fe45e9e-60e6-49ee-81a3-34c33eec8240" />
+
+
 **To study the popularity bias:**
 
 **Method 1: **
