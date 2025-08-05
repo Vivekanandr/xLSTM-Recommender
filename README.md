@@ -135,6 +135,8 @@ D. Trade-offs (RQ3): xLSTM achieves competitive accuracy on large datasets but i
 	Also shows lower parameter count, but at a cost of worse accuracy
 
 
+-----------------------------------------------------------------------------------------
+
 
 **Model Architecture:**
 
@@ -602,10 +604,8 @@ SEO (Search Engine Optimization) and SEM techniques may also be merged, along wi
 7. Aviation and Transportation, and 
 8. Other Specialized Sectors. 
 
-**Few Hugging Face models to be tested:**
-1. Transformers4Rec by NVIDIA: Integrates with Hugging Face Transformers, enabling the application of transformer architectures to sequential and session-based recommendation tasks.
 
-2. RecGPT: RecGPT is a domain-adapted large language model specifically trained for text-based recommendation tasks.
+<img width="722" height="247" alt="image" src="https://github.com/user-attachments/assets/a7edc38c-493d-43a5-9d8a-3918ea960126" />
 
 **MLops:** ML Flow, Wandb for model training, deployment and testing
 
