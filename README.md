@@ -134,6 +134,12 @@ D. Trade-offs (RQ3): xLSTM achieves competitive accuracy on large datasets but i
 	This trend suggests SAS4Rec is not able to capture long-term dependencies effectively
 	Also shows lower parameter count, but at a cost of worse accuracy
 
+Popularity Bias:
+
+<img width="796" height="550" alt="image" src="https://github.com/user-attachments/assets/9fe45e9e-60e6-49ee-81a3-34c33eec8240" />
+
+100K: Models are strong on head (popular) items but underperform on long-tail (diverse) items.
+
 
 -----------------------------------------------------------------------------------------
 
@@ -518,10 +524,6 @@ D. Temporal dynamics (e.g., timestamp-based recency)
 
 
 # Popularity bias (if a few items always appear), # Low diversity in predictions, # Whether the model is overfitting to frequent items
-
-<img width="796" height="550" alt="image" src="https://github.com/user-attachments/assets/9fe45e9e-60e6-49ee-81a3-34c33eec8240" />
-
-100K: Models are strong on head (popular) items but underperform on long-tail (diverse) items.
 
 **To study the popularity bias:**
 
