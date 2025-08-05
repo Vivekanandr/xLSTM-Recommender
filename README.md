@@ -103,7 +103,7 @@ torchaudio: 2.7.1
 
 **Model Results:**
 
-![image](https://github.com/user-attachments/assets/6f7ac3ad-644c-4c1c-ae27-f84ca410dd2d)
+<img width="811" height="562" alt="image" src="https://github.com/user-attachments/assets/147fc233-94dd-434c-a61d-b2312ac479d5" />
 
 **Conclusion from Results:**
 
@@ -114,6 +114,27 @@ B. Performance Scaling (RQ1): xLSTM matches BERT4Rec's Recall@10 (~26-27%) on th
 C. Sequence Sensitivity (RQ2): Standard deviation increases with sequence length, underscoring sensitivity to input length variations.
 
 D. Trade-offs (RQ3): xLSTM achieves competitive accuracy on large datasets but incurs higher computational costs, especially in smaller-scale scenarios.
+
+**E. From 10M Datasets:**
+
+	🔸 xLSTM: 
+ 	Dominates all three major metrics — this model is clearly the best choice.
+	For longer sequences (e.g., 128+), xLSTM maintains advantage over transformer-based models.
+	Performs well at all sequence lengths, Slightly best at 64, but stable performance overall
+
+	🔸 BERT4Rec:
+	In 10M datasets, Solid performance, but consistently lower than xLSTM. 
+	Shows a performance dip at Seq Len = 64:
+	Recall@10 drops to 0.2744 (vs. 0.3112 and 0.3171 at 32 and 128)
+	Best at Seq Len = 128, but still behind xLSTM
+	
+	🔸 SAS4Rec:
+	Performance drops drastically as sequence length increases:
+	Recall@10 drops from 0.2143 → 0.1271 → 0.0727
+	This trend suggests SAS4Rec is not able to capture long-term dependencies effectively
+	Also shows lower parameter count, but at a cost of worse accuracy
+
+
 
 **Model Architecture:**
 
