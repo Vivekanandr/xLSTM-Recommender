@@ -144,6 +144,80 @@ Popularity Bias:
 100K: Models are strong on head (popular) items but underperform on long-tail (diverse) items.
 
 
+**Comprehensive Embedding Geometry Analysis for Sequential Recommenders:**
+
+		A. Embedding Spectrum Analysis 
+		B. Variance Distribution & Intrinsic Dimension Study 
+		C. Hubness and Popularity Bias Evaluation 
+		D. t-SNE Embedding Space Visualization 
+		E. Cross-Model Representation Geometry Comparison 
+		F. Anisotropy and Isotropy Assessment 
+		G. Neighborhood Structure Stability Analysis 
+		H. Item Similarity Manifold Exploration
+
+
+<img width="915" height="881" alt="image" src="https://github.com/user-attachments/assets/5e64c75b-f2a4-4370-9787-98ed4caab4ab" />
+
+
+**Row 1 – Eigenvalue Decay (“spectrum”)**
+
+The strength of each principal component in the embedding covariance.
+
+Interpretation:
+
+		1. BERT4Rec / SASRec decay very steeply → a few dominant directions → anisotropic space (information compressed in few axes).
+		2. xLSTM’s curve is much flatter → variance spread across many dimensions → higher intrinsic dimension and better coverage of the vector space.
+		3. Flat tail means embeddings retain more independent features.
+		4. In Transformers, sharp decay often correlates with popularity or frequency bias.
+		5. xLSTM therefore encodes items more uniformly and with richer latent diversity.
+
+**Row 2 – Cumulative Explained Variance**
+
+How many components are needed to explain total variance.
+
+Interpretation:
+		
+		1. BERT4Rec and SASRec reach ≈ 90 % variance by ~50 dims → heavy redundancy.
+		2. xLSTM needs ~200 dims for the same → more distributed information.
+		3. A gentle slope indicates broader feature usage and less rank collapse.
+		4. This confirms the intrinsic-dimension metrics (≈ 180 / 204 / 250).
+		5. In summary, xLSTM = highest representational capacity, BERT4Rec/SASRec = more compact, redundant embeddings.
+
+**Row 3 – Hubness Histograms (k = 10)**
+
+How many times each item appears in other items’ top-10 nearest neighbors.
+
+Interpretation:
+		
+		1. BERT4Rec / SASRec distributions are extremely right-skewed — a few movies appear hundreds of times ⇒ hub items dominate similarity space.
+		2. xLSTM histogram is almost symmetric and much narrower — most items appear roughly equally often.
+		3. Lower hubness (Gini ≈ 0.18) ⇒ better fairness and long-tail coverage.
+		4. Transformer embeddings likely overfit to popular items.
+		5. xLSTM yields a flatter similarity graph, enhancing diversity and mitigating popularity bias.
+
+
+**Row 4 – t-SNE Projections**
+
+A 2-D nonlinear projection of the 256-D embeddings (cosine distances).
+
+Interpretation:
+		
+		1. BERT4Rec and SASRec form dense, elliptical blobs — embeddings crowd near a center → again anisotropy and hub formation.
+		2. xLSTM plot is more evenly filled, points occupy a ring-like or diffuse shape → isotropy and balanced similarity.
+		3. Fewer tight clusters means less genre-specific collapse; features are smoothly spread.
+		4. Visually, xLSTM’s space is broader and more uniform.
+		5. This geometry supports more stable neighbor retrieval across item types.
+
+**Overall summary**
+
+		A. BERT4Rec & SASRec: classic Transformer geometry — sharp spectral drop-off, anisotropy, hub dominance, overlapping t-SNE blob.
+		B. xLSTM: near-isotropic, high-rank space with uniform neighbor frequency.
+		C. xLSTM’s balanced variance explains its better diversity metrics and potentially more robust generalization.
+		D. The difference in t-SNE and spectrum shapes shows fundamentally different inductive biases: attention models compress; xLSTM expands.
+		F. Combining xLSTM with either Transformer (ensemble) could yield complementary strengths — one captures high-level correlations, the other preserves fine-grained variety.
+
+Overall, Transformers (BERT4Rec, SASRec) learn narrow, popularity-biased manifolds; xLSTM learns a broad, isotropic embedding landscape — richer, fairer, and geometrically independent.
+
 -----------------------------------------------------------------------------------------
 
 
