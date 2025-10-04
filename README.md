@@ -703,28 +703,5 @@ SEO (Search Engine Optimization) and SEM techniques may also be merged, along wi
 
 [17] A Comprehensive Review of Recommender Systems: Transitioning from Theory to Practice https://doi.org/10.48550/arXiv.2407.13699
 
-
-
 ----------------------------------------
 
-**Rough Workouts:**
-
-Singular Value Decomposition: (SVD to decompose the original matrices into three smaller matrices)
-![image](https://github.com/user-attachments/assets/50bac5cb-eae8-44f2-8ca0-270a69233eef)
-*Slight variations in the input matrices noted.
-
-
-Take Away from SVD:
-
-1. Higher positive values in the reconstructed matrix indicate stronger recommendations.
-
-2. For users or hobbies not strongly represented, values will remain closer to 0 or negative.
-
-
-Business Context: 
-
-Value Proposition: The core concept and unique benefit is to **recommend the best similar product/service to the end user** and to help them. 
-
-It is also estimated that the **market scope** for recommender system is expected to be approx 20-28 billion by 2030, currently in 2024 valued approx 6 billion US dollars. 
-
-Audio Podcast Version: https://www.dropbox.com/scl/fi/zv511ysp0ecdaqbo9nskp/Recommender-Systems_-Architectures-Applications-and-Market-Analysis.wav?rlkey=3u9za3bbogvc0506ubxohxe2w&st=gy3ekapc&dl=0
