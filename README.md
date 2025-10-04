@@ -703,5 +703,7 @@ SEO (Search Engine Optimization) and SEM techniques may also be merged, along wi
 
 [17] A Comprehensive Review of Recommender Systems: Transitioning from Theory to Practice https://doi.org/10.48550/arXiv.2407.13699
 
+[18] Lost in Sequence: Do Large Language Models Understand Sequential Recommendation?: https://arxiv.org/pdf/2502.13909
+
 ----------------------------------------
 
