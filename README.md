@@ -208,12 +208,6 @@ xLSTM 10M Performance:
 
 <img width="1013" height="767" alt="image" src="https://github.com/user-attachments/assets/aa10ee00-ee03-43a8-a06b-cc8064551ca1" />
 
-Data Flow (At High Level):
-
-<img width="660" height="838" alt="image" src="https://github.com/user-attachments/assets/ecf05710-acc1-4fcd-95bb-b17586a3a95d" />
-
-
-
 ----------------------------------------
 
 **Datasets:**
@@ -271,28 +265,8 @@ Sample Datasets:
 
 **Data Sources:** Here, we will be leveraging RecBole libraries to explore various models and to develop more customizable one. 
 
-List of Different Varieties of Datasets: (Ref: https://recbole.io/)
-
-![image](https://github.com/user-attachments/assets/e842adf0-6eaa-48b7-9ffa-68312db0788e)
 
 -------------------------------------------------------------------------------------------------------------------------------------
-
-
-**1. Model: Bert4Rec**
-
-**Input Datasets:**
-![image](https://github.com/user-attachments/assets/9a728e92-2d62-4f6e-b2cd-96080a482eb1)
-
-**Performance Optimization:** Comparision and Performance Results For All Approaches:
-1st set of results (To be fine tuned further)
-![image](https://github.com/user-attachments/assets/c73f24ed-737f-40c0-b530-436b40d56b75)
-
-
-Parameters: (100K)
-
-![image](https://github.com/user-attachments/assets/997b5bae-a9c0-469d-9fe9-90b3ca638420)
-
-
 
 
 
@@ -544,9 +518,6 @@ General Recommendation (GR):-  These models rely solely on user–item interacti
 Content-Aware Recommendation:- These models incorporate additional side information, such as user or item features. They are often applied in click-through rate (CTR) prediction tasks, using explicit feedback and binary classification evaluation. As feature-based methods, they often go beyond raw user–item interactions by including information about users, items, or context.
 
 Knowledge-Based Recommendation:- Utilizes external knowledge graphs to add semantic or structural context beyond interactions.
-
-
-<img width="722" height="247" alt="image" src="https://github.com/user-attachments/assets/a7edc38c-493d-43a5-9d8a-3918ea960126" />
 
 **MLops:** ML Flow, Wandb for model training, deployment and testing
 
