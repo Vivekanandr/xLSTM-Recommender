@@ -188,11 +188,6 @@ Interpretation:
 		D. The difference in t-SNE and spectrum shapes shows fundamentally different inductive biases: attention models compress; xLSTM expands.
 		F. Combining xLSTM with either Transformer (ensemble) could yield complementary strengths — one captures high-level correlations, the other preserves fine-grained variety.
 
-Overall, Transformers (BERT4Rec, SASRec) learn narrow, popularity-biased manifolds; xLSTM learns a broad, isotropic embedding landscape — richer, fairer, and geometrically independent.
-
-<img width="1591" height="560" alt="image" src="https://github.com/user-attachments/assets/4d543a07-52fd-4a7b-a57a-735f18334ae1" />
-
-
 -----------------------------------------------------------------------------------------
 
 
