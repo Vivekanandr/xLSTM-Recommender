@@ -1,3 +1,7 @@
+
+<img width="487" height="507" alt="image" src="https://github.com/user-attachments/assets/98f38ed1-fc9b-47d3-bd63-cfb503613a19" />
+
+
 **Datasets:**
 
 1. Amazon Software data usually refers to the large-scale Amazon Product Review datasets (reviews, ratings, timestamps, and product metadata) widely used for recommender system research. They capture user–item interactions across millions of products and enable benchmarking of collaborative and content-based recommendation models.
@@ -46,5 +50,3 @@ After Sampling Filter:
 				G. Storage formats → For scale, write sampled subsets to Parquet/ZSTD (columnar, compressed) for fast reloads vs. raw TSV/CSV.
 				H. Best practice → Use hash or last-K sampling for recommender research, time-based for evaluation splits, and combine with Parquet for speed.
 
-
-**Data Sources:** Here, we will be leveraging RecBole libraries to explore various models and to develop more customizable one. 
