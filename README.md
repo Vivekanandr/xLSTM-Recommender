@@ -137,10 +137,6 @@ Layer Normalization standardizes activations to zero mean and unit variance acro
 “Although the three models have comparable parameter counts, their learned embedding magnitudes differ substantially due to architectural design. BERT4Rec employs extensive Layer Normalization and attention-based mixing, resulting in low-magnitude, direction-focused embeddings. SASRec exhibits moderate embedding norms due to reduced normalization. In contrast, xLSTM relies on gated recurrent memory mechanisms, where embedding magnitude plays a critical role in preserving information over time, leading to higher L2 norms. These differences reflect architectural inductive biases rather than parameter scale.”
 
 
-
-<img width="915" height="881" alt="image" src="https://github.com/user-attachments/assets/5e64c75b-f2a4-4370-9787-98ed4caab4ab" />
-
-
 **Row 1 – Eigenvalue Decay (“spectrum”)**
 
 The strength of each principal component in the embedding covariance.
@@ -153,6 +149,7 @@ Interpretation:
 		4. In Transformers, sharp decay often correlates with popularity or frequency bias.
 		5. xLSTM therefore encodes items more uniformly and with richer latent diversity.
 
+
 **Row 2 – Cumulative Explained Variance**
 
 How many components are needed to explain total variance.
@@ -164,6 +161,10 @@ Interpretation:
 		3. A gentle slope indicates broader feature usage and less rank collapse.
 		4. This confirms the intrinsic-dimension metrics (≈ 180 / 204 / 250).
 		5. In summary, xLSTM = highest representational capacity, BERT4Rec/SASRec = more compact, redundant embeddings.
+
+
+<img width="915" height="881" alt="image" src="https://github.com/user-attachments/assets/5e64c75b-f2a4-4370-9787-98ed4caab4ab" />
+
 
 **Row 3 – Hubness Histograms (k = 10)**
 
