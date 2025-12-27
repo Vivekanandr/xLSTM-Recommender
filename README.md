@@ -129,6 +129,17 @@ Overall, xLSTM demonstrates strong scaling behavior (RQ1), clear sensitivity to 
 		H. Item Similarity Manifold Exploration
 
 
+**L2 Norm:-**
+
+Layer Normalization standardizes activations to zero mean and unit variance across feature dimensions, followed by learned scaling and shifting. While it does not impose a strict value range, it strongly constrains activation magnitude, typically resulting in values concentrated within a small interval. **Models such as BERT4Rec apply LayerNorm extensively, leading to tightly controlled embedding norms**. In contrast, **xLSTM applies normalization less frequently** and relies on gated recurrent dynamics, allowing embedding magnitude to play a more prominent representational role. These architectural differences explain the observed variation in embedding L2 norms.
+
+<img width="558" height="383" alt="image" src="https://github.com/user-attachments/assets/f25c8aef-2122-4243-b019-6628808c470d" />
+
+
+“Although the three models have comparable parameter counts, their learned embedding magnitudes differ substantially due to architectural design. BERT4Rec employs extensive Layer Normalization and attention-based mixing, resulting in low-magnitude, direction-focused embeddings. SASRec exhibits moderate embedding norms due to reduced normalization. In contrast, xLSTM relies on gated recurrent memory mechanisms, where embedding magnitude plays a critical role in preserving information over time, leading to higher L2 norms. These differences reflect architectural inductive biases rather than parameter scale.”
+
+
+
 <img width="915" height="881" alt="image" src="https://github.com/user-attachments/assets/5e64c75b-f2a4-4370-9787-98ed4caab4ab" />
 
 
