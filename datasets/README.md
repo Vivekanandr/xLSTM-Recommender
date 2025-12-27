@@ -1,5 +1,7 @@
 
-<img width="487" height="507" alt="image" src="https://github.com/user-attachments/assets/98f38ed1-fc9b-47d3-bd63-cfb503613a19" />
+**Experiment Setup and Datasets:-**
+
+<img width="475" height="443" alt="image" src="https://github.com/user-attachments/assets/bad54bc6-6c73-437a-8d21-fe54bd5af376" />
 
 
 **Datasets:**
