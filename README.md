@@ -268,23 +268,12 @@ Step 4: recall_list, mrr_list, ndcg_list = [], [], []
 
 ---------------------------------------------------------------------------------------
 
-**Cold Start Problem**: 
+**Approach for Cold Start Problem**: 
 Some of the commonly used approaches were:
 1. Clustering Approach,
 2. Profile Based (Meta Data) Approach,
 3. Hierarchical approach, and
 4. Novalty or Randomness Approach
-
-**Feature Focus:**
-
-A. User-level features (e.g., user age, gender, occupation)
-B. Item-level features (e.g., genres, title metadata)
-C. Time or position embeddings beyond fixed positional indices
-D. Temporal dynamics (e.g., timestamp-based recency)
-
-**Performance Optimization:**
-
-A. Implement Leave-One-Out Splitting, B. Integrate Negative Sampling.
 
 **Logit Score:** Direct Score, before applying any activation funtions, non bounded ( can be larger and can go larger negative values). Higher the logit score, better the prediction is.
 
