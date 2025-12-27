@@ -265,18 +265,7 @@ Step 4: recall_list, mrr_list, ndcg_list = [], [], []
 	• Alternatives:
 		○ Store in a dict or log with wandb, TensorBoard, etc.
 
-
-**Evaluation Metrics:** To evaluate the model accuracy Recall 5, 10, Precision, NDCG will be used mainly. 
-
-Recall = How many relevant items recommended/Total No. of relevant items **available** (measures the relevance. )
-
-Precision: How many relevant items recommended//Total No. of items **recommended** (measures the accuracy.)
-
-**Normalized Discounted Combined Gain (NDGC):** For Ranking.
-
-**Epochs:** How many times we process our complete data until we reach final/optimum goal. 
-
-**Learning rate:**, How fast did we adjust our weights to reach that optimum level.
+---------------------------------------------------------------------------------------
 
 **Cold Start Problem**: 
 Some of the commonly used approaches were:
