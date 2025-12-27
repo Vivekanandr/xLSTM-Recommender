@@ -302,8 +302,6 @@ A. Implement Leave-One-Out Splitting, B. Integrate Negative Sampling.
 
 ---------------------------------------------------------------------------------------
 
----------------------------------------------------------------------------------------
-
 **GPU Scaling:-**
 
 We benchmarked GPU inference-time scaling of sequential recommender architectures—BERT4Rec (bidirectional Transformer), SASRec (causal Transformer), and xLSTM (chunkwise recurrent model)—under identical embedding dimension (256), depth (4 blocks), vocabulary, and next-item prediction heads. Models were run in evaluation mode with inference-only forward passes, measuring per-batch latency and throughput as a function of sequence length L at fixed batch size B=32. Sequence lengths were increased up to L=1536, aligned to xLSTM’s 64-token chunk constraint, with GPU synchronization to ensure accurate timing. Transformers exhibit increasing activation and attention costs with L, while xLSTM amortizes recurrence via chunkwise parallel kernels, yielding near-linear memory growth. Observed latency curves were fit on log–log axes to estimate an effective scaling exponent α, capturing empirical runtime growth. BERT4Rec shows α≈0.98, indicating near-linear scaling in this regime due to efficient GPU attention kernels at moderate L. SASRec exhibits α≈1.26, reflecting superlinear growth from causal masking and less efficient attention execution. xLSTM achieves α≈0.64, demonstrating sublinear effective scaling dominated by fixed kernel overhead at small L and efficient chunkwise recurrence at large L. Although xLSTM has higher constant latency at short sequences, its flatter growth enables convergence toward Transformer latency at long L. Overall, results empirically confirm the quadratic sensitivity of attention-based models to sequence length and the long-context efficiency advantage of chunked recurrent architectures during inference.
@@ -313,8 +311,6 @@ We have evaluated the inference-time scaling using lightweight proxy implementat
 <img width="712" height="545" alt="image" src="https://github.com/user-attachments/assets/88a6af5c-001e-4b32-bd0d-3ff8f7f42285" />
 
 In our GPU inference benchmark at batch size 32, xLSTM shows higher latency than Transformers for short sequences but much flatter growth as sequence length increases. Its effective scaling exponent (α≈0.64) indicates sublinear runtime growth, reflecting amortized chunkwise recurrence. As a result, xLSTM narrows the latency gap at long sequences (L≈1024–1536), where attention-based models degrade more rapidly.
-
--------------------------------------------
 
 -------------------------------------------
 
@@ -329,8 +325,6 @@ Content-Aware Recommendation:- These models incorporate additional side informat
 Knowledge-Based Recommendation:- Utilizes external knowledge graphs to add semantic or structural context beyond interactions.
 
 **MLops:** ML Flow, Wandb for model training, deployment and testing
-
--------------------------------------------
 
 -------------------------------------------
 
