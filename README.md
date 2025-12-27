@@ -180,20 +180,10 @@ Interpretation:
 		4. Visually, xLSTM’s space is broader and more uniform.
 		5. This geometry supports more stable neighbor retrieval across item types.
 
-**Overall summary**
-
-		A. BERT4Rec & SASRec: classic Transformer geometry — sharp spectral drop-off, anisotropy, hub dominance, overlapping t-SNE blob.
-		B. xLSTM: near-isotropic, high-rank space with uniform neighbor frequency.
-		C. xLSTM’s balanced variance explains its better diversity metrics and potentially more robust generalization.
-		D. The difference in t-SNE and spectrum shapes shows fundamentally different inductive biases: attention models compress; xLSTM expands.
-		F. Combining xLSTM with either Transformer (ensemble) could yield complementary strengths — one captures high-level correlations, the other preserves fine-grained variety.
+-----------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------
 
-
-**Model Architecture:**
-
-![image](https://github.com/user-attachments/assets/19974b3e-3a01-4f0d-b53e-084b1e71bb85)
 
 Parameters:
 
@@ -241,10 +231,6 @@ After Sampling Filter:
 		avg_interactions_per_user: 	552.6
 		min_interactions_per_user: 	5
 		max_interactions_per_user:	1000
-
-Sample Datasets:
-
-<img width="376" height="336" alt="image" src="https://github.com/user-attachments/assets/2e3729b9-4e6e-47f5-a3a0-640985cb6a4b" />
 
 **Data Sampling Techniques:**
 				
