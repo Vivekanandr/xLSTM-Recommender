@@ -17,8 +17,6 @@ The primary objective is to evaluate the effectiveness of the xLSTM model across
 
 -------------------------------------------------
 
--------------------------------------------------
-
 This script trains a sequential recommender system on a **user-specified/customizable MovieLens dataset** (100K, 1M, 10M, or 20M).
 
 It preprocesses the data, maps user/item IDs, and splits interactions into train/validation/test sequences.
