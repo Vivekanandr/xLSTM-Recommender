@@ -203,7 +203,9 @@ Parameters:
 
 ---------------------------------------
 
-<img width="1013" height="767" alt="image" src="https://github.com/user-attachments/assets/aa10ee00-ee03-43a8-a06b-cc8064551ca1" />
+**Recommender System Pipeline:-**
+
+<img width="1151" height="787" alt="image" src="https://github.com/user-attachments/assets/25ce533a-b811-41fe-b4c1-79c314e9d995" />
 
 ----------------------------------------
 
